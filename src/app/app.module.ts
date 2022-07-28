@@ -8,6 +8,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { TheTeamComponent } from './the-team/the-team.component';
 import { ApplyNowComponent } from './apply-now/apply-now.component';
 import { ContactUsComponent } from './about-us/contact-us/contact-us.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { ContactUsComponent } from './about-us/contact-us/contact-us.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
